@@ -3,23 +3,21 @@ using namespace std;
 
 int main()
 {
-	int sessionCount;
-	int pizzaCount = 0;
+	int sessions;
 	bool flag = false;
 
-	cin >> sessionCount;
+	cin >> sessions;
 
-	int* teamCount = new int [sessionCount];
-	cin >> teamCount[0];
+	int* teams = new int [sessions];
+	cin >> teams[0];
 	int i;
-	for (i = 1; i < sessionCount; i++)
+	for (i = 1; i < sessions; i++)
 	{
-		cin >> teamCount[i];
-
-		if (teamCount[i - 1] % 2 != 0)
+		cin >> teams[i];
+		if (teams[i - 1] % 2 != 0)
 		{
-			if (teamCount[i] > 0)
-				teamCount[i]--;
+			if (teams[i] > 0)
+				teams[i]--;
 			else
 			{
 				flag = true;
@@ -28,7 +26,7 @@ int main()
 		}
 	}
 
-	if (flag || teamCount[sessionCount - 1] % 2 != 0)
+	if (flag || teams[sessions - 1] % 2 != 0)
 		cout << "NO" << endl;
 	else
 		cout << "YES" << endl;

@@ -23,24 +23,12 @@
 //
 //}
 
-class Graph
-{
-	public:
-		Graph(int sockCount, int dayCount);
-		void colorChangeCount();
-		void addNode();
-	
-	private:
-		struct Node
-		{
-			int sockNumber;
-			int color;
-		};
-		struct Edge
-		{
-			int verticies[2];
-		};
+#include <iostream>
+#include <string>
 
-		Node* node;
-		Edge* edge;
-};
+using namespace std;
+int main()
+{
+	string A = "this";
+	cout << A[2];
+}
